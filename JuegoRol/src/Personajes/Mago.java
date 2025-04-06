@@ -6,8 +6,7 @@ public class Mago extends Personaje{
 
     public Mago() {
         super();
-        this.memorizados = new String[]{" "," "," "," "};
-        this.hechizos = new String[]{"fuego","agua","hielo","penne"};
+        this.memorizados = new String[]{"","","",""};
 
         if(inteligencia < 17){
             throw new IllegalArgumentException("No puedes ser mago con menos de 17 de inteligencia");
@@ -17,11 +16,10 @@ public class Mago extends Personaje{
         }
     }
 
-    public Mago(String nombre, String raza, int fuerza, int inteligencia, int HPactual, int HPmaximo, String[] memorizados, String[] hechizos) {
-        super(nombre, raza, fuerza, inteligencia, HPactual, HPmaximo);
+    public Mago(String nombre, String raza, int fuerza, int inteligencia, int HPactual, int HPmaximo, String[] memorizados) {
+            super(nombre, raza, fuerza, inteligencia, HPactual, HPmaximo);
 
         this.memorizados = memorizados;
-        this.hechizos = hechizos;
 
         if(inteligencia < 17){
             throw new IllegalArgumentException("No puedes ser mago con menos de 17 de inteligencia");
@@ -36,6 +34,7 @@ public class Mago extends Personaje{
         for(int i = 0; i < memorizados.length; i++){
             if(memorizados[i].isEmpty()){
                 memorizados[i] = hechizo;
+                System.out.println("Hechizo " + hechizo + " memorizado en la posicion " + i);
                 return;
             }
         }
