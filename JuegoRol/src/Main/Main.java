@@ -1,3 +1,5 @@
+package Main;
+
 import Personajes.Clerigo;
 import Personajes.Mago;
 import Personajes.Personaje;
